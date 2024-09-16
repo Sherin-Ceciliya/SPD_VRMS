@@ -1,0 +1,103 @@
+/* Apply global styles for a clean, modern font and spacing */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Style for the main mission section */
+.mission-section {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.mission-content span {
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #5A67D8;
+    margin: 10px auto 20px;
+}
+
+.mission-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.mission-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mission-content li {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #444;
+}
+
+/* Image styling */
+.mission-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.fleet-section {
+    margin-bottom: 40px;
+}
+
+.fleet-section h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Add a footer section for any additional info or links */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+/* Responsive styling for smaller devices */
+@media (max-width: 768px) {
+    .mission-content {
+        padding: 15px;
+    }
+
+    .mission-content h2 {
+        font-size: 2em;
+    }
+
+    .mission-content p, .mission-content li {
+        font-size: 1em;
+    }
+
+    .mission-content img {
+        margin-bottom: 20px;
+    }
+}
