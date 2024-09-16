@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    background-color: #EBD3F8; /* Light pink background */
+    align-content: center;
+    min-height: 100vh;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    width: 85vw;
+    margin: 20px auto; /* Added margin for spacing */
+    border: 3px solid #AD49E1; /* Light purple border */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    background: url("car1.webp") center/cover no-repeat;
+    filter: brightness(0.8);
+}
+
+.content {
+    background: linear-gradient(135deg, #2E073F, #7A1CAC); /* Dark to purple gradient */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #EBD3F8; /* Light pink text color */
+    padding: 40px; /* Increased padding for spacious look */
+}
+
+.content h2 {
+    text-transform: uppercase;
+    font-size: 42px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+    font-family: 'Playfair Display', serif;
+}
+
+.content span {
+    height: 4px;
+    width: 100px;
+    background: #AD49E1; /* Light purple line */
+    margin: 20px 0;
+    border-radius: 2px;
+}
+
+.content p {
+    padding-bottom: 20px;
+    font-weight: 400;
+    opacity: 0.9;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.links {
+    margin: 20px 0;
+    display: flex;
+    gap: 20px; /* Increased gap for spacing */
+    justify-content: center;
+    align-items: center;
+}
+
+.links li {
+    list-style: none;
+    border-radius: 25px;
+    padding: 15px 25px; /* Adjusted padding for better spacing */
+    background: #7A1CAC; /* Purple button background */
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px; /* Ensuring minimum width to fit text */
+    height: 55px; /* Set fixed height for uniformity */
+    text-align: center;
+}
+
+.links li a {
+    text-transform: uppercase;
+    color: #EBD3F8; /* Light pink text */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.links li:hover {
+    transform: translateY(-5px);
+    background: #AD49E1; /* Light purple on hover */
+}
+
+.vertical-line {
+    height: 55px; /* Matching line height with the rounded boxes */
+    width: 2px;
+    background: #AD49E1; /* Light purple line */
+    margin: 0 10px; /* Added margin for spacing */
+}
+
+.icons {
+    display: flex;
+    padding: 20px 0;
+    gap: 10px;
+    justify-content: center;
+}
+
+.icons li {
+    display: block;
+    padding: 8px; /* Added padding for better click area */
+    margin: 5px;
+    border-radius: 50%; /* Rounded icon container */
+    background: #EBD3F8; /* Light pink background for icon container */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.icons li:hover {
+    background: #7A1CAC; /* Darker pink background on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow effect for better visibility */
+}
+
+.icons li i {
+    font-size: 32px; /* Larger icon size for better visibility */
+    color: #2E073F; /* Darker purple color for icons */
+    transition: color 0.3s;
+}
+
+.icons li i:hover {
+    color: #AD49E1; /* Light purple on hover */
+}
+
+/*****************/
+
+@media(max-width: 992px) {
+    section {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+    .image {
+        height: 50vh;
+    }
+    .content {
+        height: auto;
+        padding: 30px; /* Adjusted padding for smaller screens */
+    }
+    .content h2 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+    .content span {
+        margin: 15px 0;
+    }
+    .content p {
+        font-size: 16px;
+        width: 80%;
+    }
+    .links li a {
+        font-size: 14px;
+    }
+    .icons li i {
+        font-size: 26px; /* Adjusted icon size for smaller screens */
+    }
+}
+
