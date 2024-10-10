@@ -1,0 +1,39 @@
+.book-rides {
+    background-color: #EBD3F8;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.book-rides h2 {
+    color: #4B0082;
+    margin-bottom: 20px;
+}
+
+.reservations-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reservation-item {
+    background-color: #ffffff;
+    border: 1px solid #D6A5E1;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+
+.reservation-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-item div {
+    margin-bottom: 10px;
+}
+
+.reservation-item strong {
+    color: #4B0082;
+}
+

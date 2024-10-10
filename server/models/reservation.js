@@ -1,21 +1,41 @@
 const mongoose = require('mongoose');
 
 const reservationSchema = new mongoose.Schema({
-    username: {
+    customer_name: {  // Changed from 'username' to 'customer_name'
         type: String,
         required: true,
     },
-    address: {
+    pickup_time: {  // Added fields for time and date
         type: String,
         required: true,
     },
-    mobile: {
+    pickup_date: {
+        type: Date,
+        required: true,
+    },
+    drop_time: {
         type: String,
+        required: true,
+    },
+    drop_date: {
+        type: Date,
         required: true,
     },
     driving: {
         type: Boolean,
         required: true,
+    },
+    driver_id: {  // Added to hold the driver's ID
+        type: String, 
+        required: false,
+        ref: 'Driver',  // Reference to the Driver model
+        default: null,
+    },
+    ride_status: {  // Added for ride status
+        type: String,
+        enum: ['waiting', 'taken', 'completed', 'canceled'],  // Enum for possible statuses
+        required: true,
+        default: 'waiting',
     },
     plateNumber: {
         type: String,
@@ -41,23 +61,14 @@ const reservationSchema = new mongoose.Schema({
         type: String,
         required: false,
     },
-    pickupDateTime: {
-        type: Date,
+    totalPrice: {
+        type: Number,
         required: true,
-    },
-    dropDateTime: {
-        type: Date,
-        required: true,
-    },
-    totalPrice:{
-        type:Number,
-        required:true,
     }
 }, {
-    timestamps: true,
+    timestamps: true,  // Automatically add createdAt and updatedAt fields
 });
 
 const Reservation = mongoose.model('Reservation', reservationSchema);
 
 module.exports = Reservation;
-

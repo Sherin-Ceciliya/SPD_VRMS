@@ -25,7 +25,11 @@ import Cancelreservation from './Cancelreservation';
 import Allreservations from './Allreservations';
 import Pay from './Pay';
 import Damage from './Damage';
+import DriverHome from './DriverHome'
+import BookedRides from './BookedRides'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import RideRequests from './RideRequests';
+
 function App() {
   return (
     <BrowserRouter>
@@ -48,12 +52,15 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/adddriver' element={<Adddriver/>}></Route>
         <Route path='/removedriver' element={<Removedriver/>}></Route>
-        <Route path='/DriverLogin' element={<DriverLogin/>}></Route>
+        <Route path='/driverLogin' element={<DriverLogin/>}></Route>
+        <Route path='/driverHome' element={<DriverHome/>}></Route>
         <Route path='/viewreservations' element={<Viewreservations/>}></Route>
         <Route path='/cancelreservation' element={<Cancelreservation/>}></Route>
         <Route path='/Allreservations' element={<Allreservations/>}></Route>
         <Route path='/damage' element={<Damage/>}></Route>
         <Route path='/pay' element={<Pay/>}></Route>
+        <Route path='/bookedRides' element={<BookedRides/>}></Route>
+        <Route path='/rideRequests' element={<RideRequests/>}></Route>
       </Routes>
     </BrowserRouter>
   )

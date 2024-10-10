@@ -15,6 +15,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/VRMS");
 const Addon = require('./models/addon');
 const router = express.Router();
 
+
 // Assuming you have a model for Addon
 
 // POST route to add an addon
@@ -135,6 +136,7 @@ router.get('/reservations', async (req, res) => {
 });
 
 module.exports = router;
+
 // Use the upload middleware in your POST route
 router.post('/reservations', upload.single('licenseImage'), async (req, res) => {
     console.log('Incoming reservation data:', req.body);
@@ -177,6 +179,7 @@ router.post('/reservations', upload.single('licenseImage'), async (req, res) => 
         res.status(400).json({ error: error.message });
     }
 });
+
 module.exports = router;
 
 // PUT route to modify an add-on's quantity
@@ -208,27 +211,27 @@ router.delete('/drivers/remove', async (req, res) => {
 
 module.exports = router;
 
-router.post('/drivers/login', async (req, res) => {
-    const { email, password } = req.body;
+app.post('/driver/login', async (req, res) => {
+    const { driver_id, passcode } = req.body;
+
     try {
-        const driver = await Driver.findOne({ email });
+        const driver = await Driver.findOne({ driver_id: driver_id });
         if (!driver) {
-            return res.status(404).json({ success: false, message: 'Driver not found.' });
+            return res.status(200).json({ valid: false, error: 'Driver not found' }); // Return false if driver not found
         }
 
-        // Compare password with the stored hash
-        const isMatch = password== driver.password;
-        if (!isMatch) {
-            return res.status(401).json({ success: false, message: 'Invalid password.' });
+        // Assuming the passcode is stored as plain text (not recommended for production)
+        if (driver.passcode === passcode) {
+            return res.status(200).json({ valid: true });
+        } else {
+            return res.status(200).json({ valid: false, error: 'Invalid passcode' });
         }
-
-        // Successful login
-        res.json({ success: true, message: 'Login successful.' });
     } catch (error) {
-        console.error('Error during login:', error);
-        res.status(500).json({ success: false, message: 'Server error occurred.' });
+        console.error(error);
+        return res.status(500).json({ valid: false, error: 'An error occurred. Please try again.' });
     }
 });
+
 
 module.exports = router;
 
@@ -516,6 +519,7 @@ app.put('/vehicle/:plateNumber', async (req, res) => {
         return res.status(500).json({ error: 'Failed to update vehicle status.' });
     }
 });
+
 app.post('/search-vehicles', async (req, res) => {
     try {
         const { pickupDate, dropDate, vehicleType } = req.body;
@@ -559,6 +563,65 @@ app.post('/search-vehicles', async (req, res) => {
         res.status(500).json({ error: 'Server error occurred.' });
     }
 });
+
+app.get('/api/rides', async (req, res) => {
+    try {
+      const rideRequests = await Reservation.find({
+        driver_id: null,  // Fetch where driver_id is null
+        driving: false,   // Fetch where driving is false
+        ride_status: 'waiting', // Fetch where ride_status is waiting
+      });
+      res.json(rideRequests);
+    } catch (error) {
+      console.error('Error fetching ride requests:', error);
+      res.status(500).json({ message: 'Internal server error' });
+    }
+  });
+
+
+  app.patch('/reservations/:id', async (req, res) => {
+    const { driver_id } = req.body; // Only extract driver_id from the request body
+    const ride_status = "taken"; // Set ride_status to "taken"
+
+    try {
+        const updatedReservation = await Reservation.findByIdAndUpdate(
+            req.params.id,
+            { driver_id, ride_status },
+            { new: true } // Return the updated document
+        );
+
+        if (!updatedReservation) {
+            return res.status(404).send({ message: 'Reservation not found.' });
+        }
+
+        res.status(200).send(updatedReservation);
+    } catch (error) {
+        console.error('Error updating reservation:', error);
+        res.status(500).send({ message: 'Error updating reservation.' });
+    }
+});
+    
+app.patch('/reservations/complete/:id', async (req, res) => {
+    try {
+        const updatedReservation = await Reservation.findByIdAndUpdate(
+            req.params.id,
+            { driver_id: null }, // Set driver_id to null
+            { new: true } // Return the updated document
+        );
+
+        if (!updatedReservation) {
+            return res.status(404).send({ message: 'Reservation not found.' });
+        }
+
+        res.status(200).send(updatedReservation); // Send back the updated reservation
+    } catch (error) {
+        console.error('Error marking ride as completed:', error);
+        res.status(500).send({ message: 'Error marking ride as completed.' });
+    }
+});
+
+
+
 app.use('/', router);
 
 app.listen(3001, () => {
