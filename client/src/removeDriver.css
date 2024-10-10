@@ -1,0 +1,42 @@
+.remove-driver-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.remove-driver-container h2 {
+    text-align: center;
+}
+
+.remove-driver-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.remove-driver-container label {
+    margin-bottom: 10px;
+}
+
+.remove-driver-container input {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.remove-driver-container button {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}

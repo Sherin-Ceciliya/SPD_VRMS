@@ -1,0 +1,25 @@
+.info-container {
+    padding: 20px;
+    background-color: white;
+    margin: 0; /* Ensure no margin is added */
+    position: absolute; /* Position it at the top left */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it occupies the entire horizontal space */
+}
+
+.info-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.info-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.info-container p {
+    margin: 5px 0;
+    font-size: 18px;
+}

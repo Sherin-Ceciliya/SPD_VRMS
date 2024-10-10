@@ -1,0 +1,29 @@
+.dashboard-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reservation-details {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-details h3 {
+    margin-bottom: 10px;
+}
+
+.cancel-button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cancel-button:hover {
+    background-color: darkred;
+}

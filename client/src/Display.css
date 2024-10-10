@@ -1,0 +1,67 @@
+.body{
+    background-image: none;
+}
+.display-container {
+    padding: 20px;
+    background-color: white;
+    margin: 0; /* Ensure no margin is added */
+    position: absolute; /* Position it at the top left */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it occupies the entire horizontal space */
+}
+
+.display-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.display-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vehicle-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.vehicle-image {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.vehicle-info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vehicle-info div {
+    margin-right: 20px;
+}
+
+.view-button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.view-button:hover {
+    background-color: #45a049;
+}

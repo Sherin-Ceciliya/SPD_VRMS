@@ -1,0 +1,38 @@
+.driver-login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.driver-login-container h2 {
+    text-align: center;
+}
+
+.driver-login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.driver-login-container label {
+    margin-bottom: 10px;
+}
+
+.driver-login-container input {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.driver-login-container button {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}

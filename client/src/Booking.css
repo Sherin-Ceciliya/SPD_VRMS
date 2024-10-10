@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background: url(./Images/img14.jpg) no-repeat;*/
+    background-size: cover;
+    background-position: center;
+}
+
+.booking-box {
+    width: 600%;
+    margin-left:-150px;
+    max-width: 400px; /* Use max-width for responsiveness */
+    background-color: #5a1878;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.booking-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.booking-box label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.booking-box input,
+.booking-box select { /* Added select to share styles */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+}
+
+.booking-box button {
+    padding: 10px;
+    background-color: white;
+    color: #4A1862;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-box button:hover {
+    background-color: #e0e0e0; /* Change on hover for better effect */
+}

@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background: url(./Images/img14.jpg) no-repeat center center/cover;*/
+}
+
+.vehicle-box {
+    width: 100%; /* Adjusted width for responsiveness */
+    max-width: 500px;
+    background-color: #5a1878;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+}
+
+.vehicle-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.vehicle-box label {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.vehicle-box input,
+.vehicle-box select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+}
+
+.vehicle-box input[type="file"] {
+    color: white;
+    background-color: transparent;
+}
+
+.vehicle-box button {
+    padding: 10px;
+    background-color: white;
+    color: #4A1862;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vehicle-box button:hover {
+    background-color: #d3d3d3;
+}

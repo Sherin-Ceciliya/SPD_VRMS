@@ -1,0 +1,110 @@
+/* Global reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2E073F;
+}
+
+/* Wrapper (Login Box) */
+.wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    background: #5A1878;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading */
+.wrapper h2 {
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Input fields */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #7A1CAC;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #FFFFFF;
+    color: #2E073F;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #7A1CAC;
+    box-shadow: 0 0 5px rgba(122, 28, 172, 0.5);
+}
+
+/* Input container for icons */
+.input-container {
+    position: relative;
+}
+
+i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #FFFFFF;
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+/* Button (Login Button) */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #7A1CAC;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background: #AD49E1;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 15px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    .wrapper h2 {
+        font-size: 1.25em;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

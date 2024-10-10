@@ -1,0 +1,46 @@
+.modify-form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.modify-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modify-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.modify-form input,
+.modify-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.modify-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.modify-form button:hover {
+    background-color: #218838;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}

@@ -1,0 +1,328 @@
+/* HomePage.css */
+
+/* Reset some default styles */
+body, html, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Global Styles */
+.homepage {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #2E073F, #EBD3F8);
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Header Styles */
+.header {
+    background-color: #2E073F;
+    color: #ffffff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    display: inline;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.login-button {
+    background-color: #EBD3F8;
+    color: black;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* About Us Section */
+.about-us {
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    color: #ffffff;
+}
+
+.about-us-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.about-us-content h2 {
+    color: #2E073F;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.about-us-content p {
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.btn-custom {
+    background-color: rgba(172, 73, 225, 0.39); /* Equivalent to #ac49e165 */
+    color: #2e073fe4;
+}
+
+.btn-custom:hover {
+    background-color: #AD49E1;
+    border-color: #9100dfaf;
+}
+
+.btn-custom2 {
+    background-color: #47016db7;
+    border-color: #47016db7;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btn-custom2:hover {
+    background-color: #2E073F;
+    border-color: #2E073F;
+}
+
+/* Features Section */
+.features-section {
+    margin: 50px;
+}
+
+.features-section .feature-image {
+    margin-bottom: 1rem;
+    height: 10rem;
+    align-self: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon-small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: #800080; /* Purple */
+    background-image: linear-gradient(180deg, rgba(128, 0, 128, 1) 0%, rgba(128, 0, 128, 0.5) 100%);
+    font-size: 1.25rem;
+    border-radius: 0.75rem;
+    transition: background-color 0.3s ease;
+}
+
+.feature-icon-custom {
+    background-color: #800080; /* Purple */
+}
+
+.feature-icon-custom:hover {
+    background-color: #6a006a; /* Darker Purple */
+}
+
+.feature-icon-img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}
+
+.text-body-emphasis {
+    color: #660000;
+}
+
+.text-body-secondary {
+    color: #990000;
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Promo Section */
+.promo-section {
+    position: relative;
+    background-image: url(./Images/img9.jpg); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 2rem;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.about-us{
+    background-image: url(./Images/img8.jpg);
+                    background-size: cover;
+                    background-position: center;
+}
+.promo-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.promo-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.promo-content .btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15rem;
+}
+
+.promo-content .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Reviews Section */
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.review-card {
+    background-color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    color: #333;
+    text-align: center;
+}
+
+.review-card h4 {
+    color: #004a9a;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    color: #333;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2E073F;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section h3 {
+    color: rgb(128, 128, 128);
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column;
+        height: auto;
+    }
+    .about-us-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-content {
+        padding: 1rem;
+    }
+}
